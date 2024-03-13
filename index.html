@@ -1,1 +1,43 @@
+<html>
+<body>
+    <script>
+    // Dit programma zoekt een getal in een rij willekeurige getallen.
+    // Randgevallen:
+    // Het getal staat op plek 0.
+    // Het getal staat op de laatste plek.
+    // Het getal word ergens gevonden op plek i.
+    // Het getal word niet gevonden.
+    var zoekGetal, i;
+    var getallenRij = new Array(10);
 
+    for (i = 0; i <= 9; i++) {
+        getallenRij[i] = Math.floor(Math.random() * 100);
+    }
+    window.alert("Welk getal wil je zoeken: ");
+    zoekGetal = Number(window.prompt('Enter a value for zoekGetal'));
+    i = 0;
+
+    // Wat moet er in de WHILE-lus komen om het algoritme te laten werken?
+    // Het programma gaat kijken of het getal in de lijst staat.
+    while (zoekGetal != getallenRij[i] && i < 9) {
+        i = i + 1;
+    }
+
+    // Als het getal niet in de getallenRij staat, gaat het programma verder kijken.
+    if (i == 9) {
+
+        // als het getal van 1 t/m 9 in de getallenrij staat, gaat het programma kijken welk getal erbij hoort
+        if (zoekGetal != getallenRij[i]) {
+            window.alert("Getal niet gevonden");
+        } else {
+            window.alert(zoekGetal.ToString() + "staat op plek" + i);
+        }
+    } else {
+        window.alert(zoekGetal.ToString() + " staat op plek " + i);
+    }
+
+    </script>
+</body>
+
+
+</html>
