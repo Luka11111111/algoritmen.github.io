@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <script>
+            function main() {
+    var temp;
+    var i;
+    var getallen = new Array(10);
+
+    for (i = 0; i <= 9; i++) {
+        getallen[i] = Math.floor(Math.random() * 100);
+    }
+
+    // Hier staat dat het programma 9 getallen moet geven tussen 0 en 100
+    var herhaler;
+
+    herhaler = 0;
+    var a;
+
+    for (a = 0; a <= 9; a++) {
+        for (i = 0; i <= 8; i++) {
+            if (getallen[i] > getallen[i + 1]) {
+                temp = getallen[i];
+                getallen[i] = getallen[i + 1];
+                getallen[i + 1] = temp;
+                herhaler = herhaler + 1;
+            } else {
+                herhaler = herhaler + 1;
+            }
+        }
+    }
+    window.alert("Het is klaar, alle getallen zijn nu op de goede volgorde.");
+}
+
+        </script>
+    </body>
+</html>
